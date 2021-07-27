@@ -4,18 +4,18 @@
         <remote name="savannah" fetch="https://git.savannah.gnu.org/git" />
         <remote name="tfo"      fetch="https://git.trustedfirmware.org" />
 
-        <default remote="github" revision="master" />
+	<default remote="github" revision="master" />
 
         <!-- OP-TEE gits -->
-        <project path="optee_client"         name="OP-TEE/optee_client.git" revision="refs/tags/3.14.0" clone-depth="1" />
-        <project path="optee_os"             name="OP-TEE/optee_os.git" revision="refs/tags/3.14.0" clone-depth="1" />
-        <project path="optee_test"           name="OP-TEE/optee_test.git" revision="refs/tags/3.14.0" clone-depth="1" />
-        <project path="build"                name="OP-TEE/build.git" revision="refs/tags/3.14.0" clone-depth="1">
+        <project path="optee_client"         name="OP-TEE/optee_client.git" revision="refs/tags/3.14.0" />
+        <project path="optee_os"             name="arugan02/optee_os.git" revision="sel2_spmc" />
+        <project path="optee_test"           name="OP-TEE/optee_test.git" revision="refs/tags/3.14.0" />
+        <project path="build"                name="arugan02/build.git" revision="sel2_spmc">
                 <linkfile src="fvp.mk" dest="build/Makefile" />
         </project>
 
         <!-- linaro-swg gits -->
-        <project path="linux"                name="linaro-swg/linux.git"                  revision="refs/tags/optee-3.14.0" clone-depth="1" />
+        <project path="linux"                name="arugan02/linux.git" revision="arm_ffa" />
         <project path="optee_examples"       name="linaro-swg/optee_examples.git" revision="refs/tags/3.14.0" clone-depth="1" />
 
         <!-- Misc gits -->
@@ -23,7 +23,8 @@
         <project path="edk2"                 name="tianocore/edk2.git"                    revision="dd4cae4d82c7477273f3da455084844db5cca0c0" />
         <project path="edk2-platforms"       name="tianocore/edk2-platforms.git"          revision="02daa58c21f89628b4d8c76f95f3a554289149bc" />
         <project path="grub"                 name="grub.git"                              revision="refs/tags/grub-2.02" clone-depth="1" remote="savannah" />
-        <project path="trusted-firmware-a"   name="TF-A/trusted-firmware-a.git"           revision="refs/tags/v2.5" clone-depth="1" remote="tfo" />
+        <project path="trusted-firmware-a"   name="arugan02/arm-trusted-firmware.git"     revision="sel2_spmc" />
+	<project path="hafnium"              name="hafnium/hafnium.git"                   revision="refs/tags/v2.5" remote="tfo" />
         <project path="mbedtls"              name="ARMmbed/mbedtls.git"                   revision="refs/tags/mbedtls-2.24.0" />
 
         <!-- fTPM implementation -->
